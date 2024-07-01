@@ -16,7 +16,15 @@ function ToDoCard({task, category, index, deleteItem}) {
     others: "🤷‍♂️"
   }
 
- 
+  const CATEGORY_COLORS = {
+    work: "#33cc33",
+    shopping: "#3498db",
+    learning: "#2ecc71",
+    personal: "#ff0000",
+    health: "#000",
+    study: "#9933ff",
+    others: "#666699"
+  }
 
   return (
     <div className='todo-card'>
