@@ -8,11 +8,29 @@ import Swal from 'sweetalert2'
 
 function Home() {
 
-  
-  const [todoList, setTodoList] = useState([])
-  const [newTask, setNewTask] = useState("")
-  const [category, setCategory] = useState("")
+  //    const todoList = [
+  //         "go to gym",
+  //         "buy Groceries",
+  //         "go to school",
+  //         "feed the cat",
+  //         "make dinner",
+  //         "read a book",
+  //         "clean the house",
+  //         "practice yoga",
+  //         "go to the gym",
+  //         "take a shower",
+  //         "practice piano",
+  //         "go for a walk",
+  //         "learn a new language",
+  //         "make a presentation",
+  //         "make a video call",
+  //         "practice guitar",
+  //         "take a nap",
+  //        
 
+
+  //     ]
+ 
 
   useEffect(()=>{
     const savedTodoList = localStorage.getItem("todoList")
