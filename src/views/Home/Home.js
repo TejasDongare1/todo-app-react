@@ -51,7 +51,27 @@ function Home() {
 
   function deleteItem(index){
 
-   
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to delete this task!",
+      icon: 'warning',
+      showCancelButton: true
+    }).then((result)=>{
+      if(!result.isConfirmed){
+        return
+      }
+      const newTodoList = todoList.filter((item, i)=>{
+        if( i == index){
+          return false
+        }
+        else{
+          return true
+        }
+      })
+    
+    setTodoList(newTodoList)
+  })
+  }
 
   return (
     <div>
