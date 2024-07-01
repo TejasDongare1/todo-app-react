@@ -35,7 +35,12 @@ function Home() {
   const [category, setCategory] = useState("")
 
 
- 
+  useEffect(()=>{
+    const savedTodoList = localStorage.getItem("todoList")
+    if(savedTodoList){
+      setTodoList(JSON.parse(savedTodoList))
+    }
+  },[])
 
   useEffect(()=>{
     if(todoList.length === 0) return
@@ -119,20 +124,7 @@ function Home() {
           }
           } />
       </div>
-      <select name="" id="" 
-      className='category-select' 
-      value={category}
-      onChange={(e)=>{
-        setCategory(e.target.value)
-      }}>
-        <option value="">Category</option>
-        <option value="learning">Learning</option>
-        <option value="work">Work</option>
-        <option value="shopping">Shopping</option>
-        <option value="health">Health</option>
-        <option value="personal">Personal</option>
-        <option value="others">Others</option>
-      </select>
+     
       <Toaster />
     </div>
   )
