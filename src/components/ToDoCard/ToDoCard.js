@@ -6,15 +6,7 @@ import toast, { Toaster } from 'react-hot-toast'
 
 function ToDoCard({task, category, index, deleteItem}) {
 
-  const CATEGORY_EMOJI_MAP = {
-    work: "💪",
-    shopping: "🛒",
-    learning: "💻",
-    personal: "🧑‍🦳",
-    health: "🧑‍⚕️",
-    study: "📘",
-    others: "🤷‍♂️"
-  }
+ 
 
   const CATEGORY_COLORS = {
     work: "#33cc33",
