@@ -30,14 +30,12 @@ function Home() {
 
 
   //     ]
- 
+  const [todoList, setTodoList] = useState([])
+  const [newTask, setNewTask] = useState("")
+  const [category, setCategory] = useState("")
 
-  useEffect(()=>{
-    const savedTodoList = localStorage.getItem("todoList")
-    if(savedTodoList){
-      setTodoList(JSON.parse(savedTodoList))
-    }
-  },[])
+
+ 
 
   useEffect(()=>{
     if(todoList.length === 0) return
